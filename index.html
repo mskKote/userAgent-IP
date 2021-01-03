@@ -23,7 +23,6 @@
 		content.innerHTML += `<p>userAgent: <span style="color: #45B39D">${window.navigator.userAgent}</span></p>`;
 
 		$.getJSON('https://ipapi.co/json/', function (data) {
-			console.log('data :>> ', data);
 			for (const key in data) {
 				if (Object.hasOwnProperty.call(data, key))
 					content.innerHTML += `<p>${key}: <span style="color: #45B39D">${data[key]}</span></p>`;
