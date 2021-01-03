@@ -29,7 +29,10 @@
 
 		$.getJSON('https://ipapi.co/json/', function (data) {
 			console.log('data :>> ', data);
-			content.innerHTML += `<p>IP: <span style="color: #45B39D">${data.geobytesremoteip}</span></p>`;
+			for (const key in data) {
+				if (Object.hasOwnProperty.call(data, key))
+					content.innerHTML += `<p>${key}: <span style="color: #45B39D">${data[key]}</span></p>`;
+			}
 		});
 
 
