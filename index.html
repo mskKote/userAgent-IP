@@ -20,7 +20,6 @@
 
 	<script type="text/javascript">
 		const content = document.querySelector("#content");
-		// console.log('IP :>> ', IP);
 		content.innerHTML += `<p>userAgent: <span style="color: #45B39D">${window.navigator.userAgent}</span></p>`;
 
 		$.getJSON('https://ipapi.co/json/', function (data) {
